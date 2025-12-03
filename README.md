@@ -6,7 +6,7 @@
 ## Complete Chapter List
 
 ### Part 1: Foundation (Chapters 1-4)
-✅ **Chapter 1**: Introduction to Automation Testing and Selenium
+✅ **[Chapter 1: Introduction to Automation Testing and Selenium](chapter-1-introduction-to-automation-testing-and-selenium.md)** [file:2]
    - What is Automation Testing?
    - Why Selenium?
    - Selenium Tools Suite
