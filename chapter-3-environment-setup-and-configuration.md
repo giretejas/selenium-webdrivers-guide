@@ -38,7 +38,7 @@ public class FirstTest {
 
 - Run and see browser automation in action.
 
-## 3.4 Maven Project Configuration
+### 3.4 Maven Project Configuration
 
 ```xml
 <dependency>
@@ -48,7 +48,7 @@ public class FirstTest {
 </dependency>
 ```
 
-## 3.5 Troubleshooting Tips
+### 3.5 Troubleshooting Tips
 
 - Check PATH variables.
 - Ensure browser compatibility with driver version.
