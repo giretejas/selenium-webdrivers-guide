@@ -1,16 +1,14 @@
 # Chapter 5: Locating Elements – Strategies and Implementation
 
----
-
 ## Introduction
 
 - Locators are used to identify an element (buttons, inputs, links) on a web page with the help of locator types defined in a `By` class so selenium can interact with them.
 - To identify an element present on a web page we used `findElement()` method which is defined in `WebDriver` interface.
 - `findElement()` method will identify element with the help of `By` class static methods known as `Locators`.
 
----
-
 ## Locator Types
+
+---
 
 ### 1 By id(String id)
 
@@ -120,8 +118,6 @@ driver.findElement(By.cssSelector("tagName[attribute^=value]"));
 ```java
 driver.findElement(By.cssSelector("tagName[attribute$=value]"));
 ```
-
----
 
 ## 8 By xpath(String xpathExpression)
 
