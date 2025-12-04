@@ -6,13 +6,18 @@
 - WebDriver interface extends SearchContext interface which is a parent interface of WebDriver which contains two methods `findElement()` and `findElements()`.
 - All browser driver classes implements WebDriver interface, so WebDriver provides common methods required to automate any browser.
 
+---
+
 ## Core Methods of WebDriver(I)
 
 ### get(String url)
 
 **Signature**: `void get(String url)`
+
 **Description**: Loads a new web page in the current browser window using the given URL.
+
 **Return type**: `void`
+
 **Common exceptions**:  
 
 - `InvalidArgumentException` – malformed URL or missing protocol
@@ -48,9 +53,13 @@ public class GetMethod {
 ### getTitle()
 
 **Signature**: `String getTitle()`
-**Description**: Returns the title text of the current page.  
+
+**Description**: Returns the title text of the current page.
+
 **Return type**: `String`
+
 **Common exceptions**: Session invalid or window closed
+
 **Best practices**:  
 
 - Use for navigation verification assertions
@@ -78,9 +87,13 @@ public class GetTitleMethod {
 ### getCurrentUrl()
 
 **Signature**: `String getCurrentUrl()`
+
 **Description**: Returns the URL of the currently loaded page
+
 **Return type**:`String`
+
 **Common exceptions**: Session invalid or window closed
+
 **Best practices**:  
 
 - Verify successful navigation and redirects
@@ -107,8 +120,11 @@ public class GetCurrentUrlMethod {
 ### findElement(By locator)
 
 **Signature**: `WebElement findElement(By locator)`
+
 **Description**: Returns the first matching element using the locator strategy
+
 **Return type**: `WebElement`
+
 **Common exceptions**:  
 
 - `NoSuchElementException` – element not found
@@ -145,8 +161,11 @@ public class FindElementMethod {
 ### findElements(By locator)
 
 **Signature**: `List<WebElement> findElements(By locator)`
+
 **Description**: Returns all matching elements (empty list if none found)
+
 **Return type**: `List<WebElement>`
+
 **Common exceptions**: `StaleElementReferenceException` after DOM changes
 
 **Best practices**:  
@@ -182,8 +201,11 @@ public class FindElementsMethod {
 ### manage()
 
 **Signature**: `WebDriver.Options manage()`
+
 **Description**: Returns Options interface for cookies, timeouts, window management
+
 **Return type**: `WebDriver.Options`
+
 **Common exceptions**: Cookie domain mismatch errors
 
 **Best practices**:  
@@ -257,8 +279,11 @@ public class ManageMethod {
 ### navigate()
 
 **Signature**: `WebDriver.Navigation navigate()`
+
 **Description**: Returns Navigation interface for browser navigation
+
 **Return type**: `WebDriver.Navigation`
+
 **Common exceptions**: `TimeoutException`, invalid URLs
 
 **Best practices**:  
@@ -295,8 +320,11 @@ public class NavigateMethod {
 ### getPageSource()
 
 **Signature**: `String getPageSource()`
+
 **Description**: Returns HTML source of current page
+
 **Return type**: `String`
+
 **Common exceptions**: Invalid session
 
 **Best practices**:  
@@ -331,8 +359,11 @@ public class GetPageSourceMethod {
 
 - `String getWindowHandle()`  
 - `Set<String> getWindowHandles()`
+
 **Description**: Returns current window handle and all session handles.
+
 **Return types**: `String`, `Set<String>`
+
 **Common exceptions**: `NoSuchWindowException`
 
 **Best practices**:  
@@ -366,8 +397,11 @@ public class GetWindowHandleMethod {
 ### switchTo()
 
 **Signature**: `WebDriver.TargetLocator switchTo()`
+
 **Description**: Switches focus between windows, frames, and alerts.
+
 **Return type**: `WebDriver.TargetLocator`
+
 **Common exceptions**:  
 
 - `NoSuchWindowException`
