@@ -1,5 +1,7 @@
 # Chapter 5: Locating Elements – Strategies and Implementation
 
+--
+
 ## 5.1 Introduction
 
 - Locators are used to identify an element (buttons, inputs, links) on a web page with the help of locator types defined in a `By` class so selenium can interact with them.
