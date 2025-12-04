@@ -126,3 +126,21 @@ driver.findElement(By.cssSelector("tagName[attribute$=value]"));
 - It supports dynamic xpath, parent-child traversal condition, indexing, logical operators etc.
 
 ### Types of xpath expression
+
+**1. xpath by attribute**:
+
+```java
+driver.findElement(By.xpath("//input[@id='username']"));
+```
+
+**2. xpath for multiple attribute**:
+
+```java
+driver.findElement(By.xpath("//input[@id='username' and @type='text']"));
+```
+
+**3. xpath using contains**:
+
+```java
+driver.findElement(By.xpath("//input[contains(@id,'username')]"));
+```
