@@ -1,30 +1,108 @@
 # Chapter 5: Locating Elements – Strategies and Implementation
 
-### 5.1 Introduction
-Locating web elements is foundational for Selenium automation. Selenium supports several locator strategies, each suited to different scenarios.
+## 5.1 Introduction
 
-### 5.2 Locator Types
-- **By ID**: Fastest, uses document.getElementById.
-- **By Name**: Useful for forms.
-- **By Class Name**: Good for groups, may match multiple elements.
-- **By Tag Name**: Used for broad selections.
-- **By Link Text / Partial Link Text**: For anchor tags.
-- **By CSS Selector**: Powerful and fast, supports complex queries.
-- **By XPath**: Most flexible, slower, supports axes and dynamic attributes.
+- Locators are used to identify an element (buttons, inputs, links) on a web page with the help of locator types defined in a `By` class so selenium can interact with them.
+- To identify an element present on a web page we used `findElement()` method which is defined in `WebDriver` interface.
+- `findElement()` method will identify element with the help of `By` class static methods known as `Locators`.
 
-### 5.3 CSS Selector Examples
+## 5.2 Locator Types
+
+### 5.2.1  By id(String id)
+
+- A By which locates elements by the value of the `id` attribute.
+- Id are unique for each elements on webpage, so its common fastest and stable way to find element using id attribute
+
+**syntax**:
+
 ```java
-driver.findElement(By.cssSelector(".login-form #email"));
-driver.findElements(By.cssSelector("div.product-list > ul > li"));
+driver.findElement(By.id("elementID"));
 ```
 
-### 5.4 XPath Examples
+### 5.2.2  By name(String name)
+
+- A By which locates elements by the value of the `name` attribute.
+- If web page have multiple element with same name attribute value then method will return first element of page.
+
+**syntax**:
+
 ```java
-driver.findElement(By.xpath("//input[@id='username']"));
-driver.findElement(By.xpath("//div[@class='container']/button"));
+driver.findElement(By.name("elementName"));
 ```
 
-### 5.5 Best Practices
-- Prefer ID, CSS for speed/reliability.
-- Use XPath only when necessary (dynamic UI, complex relationships).
-- Inspect elements in browser developer tools for locator validation.
+### 5.2.3  By className(String className)
+
+- A By which locates elements by the value of the `class` attribute.
+- works only when class name is single, not multiple values.
+
+**syntax**:
+
+```java
+driver.findElement(By.className("class"));
+```
+
+### 5.2.4  By tagName(String tagName)
+
+- A By which locates elements by their `tag` name.
+
+**syntax**:
+
+```java
+driver.findElement(By.tagName("tagName"));
+```
+
+### 5.2.5  By linkText(String linkText)
+
+- A By which locates A elements by the exact text it displays.
+- locates a hyperlink(`<a>`) using complete visible text.
+- partial text cannot find element
+- need same text as given in hyperlink
+
+**syntax**:
+
+```java
+driver.findElement(By.linkText("linkText"));
+```
+
+### 5.2.6  By partialLinkText(String linkText)
+
+- A By which locates elements that contain the given link text.
+- Selects a hyperlink that contains partial visible text.
+- usefull when text is too long.
+
+**syntax**:
+
+```java
+driver.findElement(By.partialLinkText("linkText"));
+```
+
+### 5.2.7 By cssSelector(String cssSelector)
+
+- A By which locates elements by CSS attributes like `id, name, class` etc.
+- css selector are faster than xpath, often more readable.
+
+**syntax**:
+
+```java
+driver.findElement(By.cssSelector("selector"));
+```
+
+#### following ways to find element using css selector
+
+**id**: `driver.findElement(By.cssSelector("#id"));`
+**class**: `driver.findElement(By.cssSelector(".class"));`
+**attribute**: `driver.findElement(By.cssSelector("[attribute=value]"));`
+**multiple attribute**: `driver.findElement(By.cssSelector("tagName[attribute1=value1][attribute2=value2]"));`
+**contains**: `driver.findElement(By.cssSelector("tagName[attribute*=value]"));`
+**starts-with**: `driver.findElement(By.cssSelector("tagName[attribute^=value]"));`
+**ends-with**: `driver.findElement(By.cssSelector("tagName[attribute$=value]"));`
+
+### 5.2.8 By xpath(String xpathExpression)
+
+- A By which locates elements via XPath.
+- It is most powerfull and flexible locator strategy, generally used when element doesn't have id, name, class attributes.
+- It supports dynamic xpath, parent-child traversal condition, indexing, logical operators etc.
+
+## 5.3 Types of xpath
+
+### 5.3.1 xpath by attribute
