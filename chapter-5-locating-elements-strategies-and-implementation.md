@@ -6,6 +6,8 @@
 - To identify an element present on a web page we used `findElement()` method which is defined in `WebDriver` interface.
 - `findElement()` method will identify element with the help of `By` class static methods known as `Locators`.
 
+---
+
 ## 5.2 Locator Types
 
 ### 5.2.1  By id(String id)
@@ -89,25 +91,57 @@ driver.findElement(By.cssSelector("selector"));
 
 #### following ways to find element using css selector
 
-**id**:
+**1. id**:
 
 ```java
 driver.findElement(By.cssSelector("#id"));
 ```
 
-**class**: `driver.findElement(By.cssSelector(".class"));`
-**attribute**: `driver.findElement(By.cssSelector("[attribute=value]"));`
-**multiple attribute**: `driver.findElement(By.cssSelector("tagName[attribute1=value1][attribute2=value2]"));`
-**contains**: `driver.findElement(By.cssSelector("tagName[attribute*=value]"));`
-**starts-with**: `driver.findElement(By.cssSelector("tagName[attribute^=value]"));`
-**ends-with**: `driver.findElement(By.cssSelector("tagName[attribute$=value]"));`
+**2. class**:
 
-### 5.2.8 By xpath(String xpathExpression)
+```java
+driver.findElement(By.cssSelector(".class"));
+```
+
+**3. attribute**:
+
+```java
+driver.findElement(By.cssSelector("[attribute=value]"));
+```
+
+**4. multiple attribute**:
+
+```java
+driver.findElement(By.cssSelector("tagName[attribute1=value1][attribute2=value2]"));
+```
+
+**5. contains**:
+
+```java
+driver.findElement(By.cssSelector("tagName[attribute*=value]"));
+```
+
+**6. starts-with**:
+
+```java
+driver.findElement(By.cssSelector("tagName[attribute^=value]"));
+```
+
+**7. ends-with**:
+
+```java
+driver.findElement(By.cssSelector("tagName[attribute$=value]"));
+```
+
+---
+
+## 5.3 By xpath(String xpathExpression)
 
 - A By which locates elements via XPath.
 - It is most powerfull and flexible locator strategy, generally used when element doesn't have id, name, class attributes.
 - It supports dynamic xpath, parent-child traversal condition, indexing, logical operators etc.
 
-## 5.3 Types of xpath
+---
 
-### 5.3.1 xpath by attribute
+### 5.3.1 Types of xpath expression
+
