@@ -1,14 +1,14 @@
 # Chapter 4: WebDriver Interface and Core Methods
 
-## 4.1 WebDriver Interface Overview
+## WebDriver Interface Overview
 
 - WebDriver is an interface that represents a web browser, which contains abstract methods which is used to perform actions on a browser.
 - WebDriver interface extends SearchContext interface which is a parent interface of WebDriver which contains two methods `findElement()` and `findElements()`.
 - All browser driver classes implements WebDriver interface, so WebDriver provides common methods required to automate any browser.
 
-## 4.2 Core Methods of WebDriver(I)
+## Core Methods of WebDriver(I)
 
-### 4.2.1 get(String url)
+### get(String url)
 
 **Signature**: `void get(String url)`
 **Description**: Loads a new web page in the current browser window using the given URL.
@@ -45,7 +45,7 @@ public class GetMethod {
 
 ```
 
-### 4.2.2 getTitle()
+### getTitle()
 
 **Signature**: `String getTitle()`
 **Description**: Returns the title text of the current page.  
@@ -75,7 +75,7 @@ public class GetTitleMethod {
 }
 ```
 
-### 4.2.3 getCurrentUrl()
+### getCurrentUrl()
 
 **Signature**: `String getCurrentUrl()`
 **Description**: Returns the URL of the currently loaded page
@@ -104,7 +104,7 @@ public class GetCurrentUrlMethod {
 
 ```
 
-### 4.2.4 findElement(By locator)
+### findElement(By locator)
 
 **Signature**: `WebElement findElement(By locator)`
 **Description**: Returns the first matching element using the locator strategy
@@ -142,7 +142,7 @@ public class FindElementMethod {
 
 ```
 
-### 4.2.5 findElements(By locator)
+### findElements(By locator)
 
 **Signature**: `List<WebElement> findElements(By locator)`
 **Description**: Returns all matching elements (empty list if none found)
@@ -179,7 +179,7 @@ public class FindElementsMethod {
 }
 ```
 
-### 4.2.6 manage()
+### manage()
 
 **Signature**: `WebDriver.Options manage()`
 **Description**: Returns Options interface for cookies, timeouts, window management
@@ -254,7 +254,7 @@ public class ManageMethod {
 }
 ```
 
-### 4.2.7 navigate()
+### navigate()
 
 **Signature**: `WebDriver.Navigation navigate()`
 **Description**: Returns Navigation interface for browser navigation
@@ -292,7 +292,7 @@ public class NavigateMethod {
 
 ```
 
-### 4.2.8 getPageSource()
+### getPageSource()
 
 **Signature**: `String getPageSource()`
 **Description**: Returns HTML source of current page
@@ -325,7 +325,7 @@ public class GetPageSourceMethod {
 
 ```
 
-### 4.2.9 Window Handle Methods
+### Window Handle Methods
 
 **Signatures**:  
 
@@ -363,7 +363,7 @@ public class GetWindowHandleMethod {
 
 ```
 
-### 4.2.10 switchTo()
+### switchTo()
 
 **Signature**: `WebDriver.TargetLocator switchTo()`
 **Description**: Switches focus between windows, frames, and alerts.

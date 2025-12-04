@@ -1,6 +1,6 @@
 # Chapter 5: Locating Elements – Strategies and Implementation
 
---
+---
 
 ## 5.1 Introduction
 
@@ -17,8 +17,6 @@
 - A By which locates elements by the value of the `id` attribute.
 - Id are unique for each elements on webpage, so its common fastest and stable way to find element using id attribute
 
-**syntax**:
-
 ```java
 driver.findElement(By.id("elementID"));
 ```
@@ -27,8 +25,6 @@ driver.findElement(By.id("elementID"));
 
 - A By which locates elements by the value of the `name` attribute.
 - If web page have multiple element with same name attribute value then method will return first element of page.
-
-**syntax**:
 
 ```java
 driver.findElement(By.name("elementName"));
@@ -39,8 +35,6 @@ driver.findElement(By.name("elementName"));
 - A By which locates elements by the value of the `class` attribute.
 - works only when class name is single, not multiple values.
 
-**syntax**:
-
 ```java
 driver.findElement(By.className("class"));
 ```
@@ -48,8 +42,6 @@ driver.findElement(By.className("class"));
 ### 5.2.4  By tagName(String tagName)
 
 - A By which locates elements by their `tag` name.
-
-**syntax**:
 
 ```java
 driver.findElement(By.tagName("tagName"));
@@ -62,8 +54,6 @@ driver.findElement(By.tagName("tagName"));
 - partial text cannot find element
 - need same text as given in hyperlink
 
-**syntax**:
-
 ```java
 driver.findElement(By.linkText("linkText"));
 ```
@@ -74,8 +64,6 @@ driver.findElement(By.linkText("linkText"));
 - Selects a hyperlink that contains partial visible text.
 - usefull when text is too long.
 
-**syntax**:
-
 ```java
 driver.findElement(By.partialLinkText("linkText"));
 ```
@@ -84,8 +72,6 @@ driver.findElement(By.partialLinkText("linkText"));
 
 - A By which locates elements by CSS attributes like `id, name, class` etc.
 - css selector are faster than xpath, often more readable.
-
-**syntax**:
 
 ```java
 driver.findElement(By.cssSelector("selector"));
@@ -142,8 +128,6 @@ driver.findElement(By.cssSelector("tagName[attribute$=value]"));
 - A By which locates elements via XPath.
 - It is most powerfull and flexible locator strategy, generally used when element doesn't have id, name, class attributes.
 - It supports dynamic xpath, parent-child traversal condition, indexing, logical operators etc.
-
----
 
 ### 5.3.1 Types of xpath expression
 
