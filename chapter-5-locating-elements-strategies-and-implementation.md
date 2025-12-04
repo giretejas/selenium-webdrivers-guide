@@ -89,7 +89,12 @@ driver.findElement(By.cssSelector("selector"));
 
 #### following ways to find element using css selector
 
-**id**: `driver.findElement(By.cssSelector("#id"));`
+**id**:
+
+```java
+driver.findElement(By.cssSelector("#id"));
+```
+
 **class**: `driver.findElement(By.cssSelector(".class"));`
 **attribute**: `driver.findElement(By.cssSelector("[attribute=value]"));`
 **multiple attribute**: `driver.findElement(By.cssSelector("tagName[attribute1=value1][attribute2=value2]"));`
