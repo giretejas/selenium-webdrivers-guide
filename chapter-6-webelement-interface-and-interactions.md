@@ -259,4 +259,49 @@
 
 **Exceptions**:
 
-- `StaleElementReferenceException`
+- `WebDriverException`
+
+## Example
+
+```java
+package practice.giretejas.selenium.webdriver.webelements;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SendKeysMethod {
+    public static void main(String[] args) {
+    WebDriver driver = null;
+
+        try {
+            driver = new ChromeDriver();
+            driver.get("https://www.tutorialspoint.com/selenium/practice/text-box.php");
+            Thread.sleep(1000);
+
+            WebElement fullNameField = driver.findElement(By.id("fullname"));
+            WebElement emailField = driver.findElement(By.id("email"));
+            WebElement addressField = driver.findElement(By.id("address"));
+            WebElement passwordField = driver.findElement(By.id("password"));
+            WebElement buttonField = driver.findElement(By.xpath("//input[@type='submit' and @value='Submit']"));
+
+            fullNameField.sendKeys("Tejas");
+            emailField.sendKeys("test@test.com");   
+            addressField.sendKeys("71 JSPM streat, Pune");
+            passwordField.sendKeys("9876543210");
+            buttonField.click();    
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            System.err.println("Error: " + e.getMessage());
+
+        } finally {
+
+            if (driver != null)
+            driver.quit();
+
+        }
+    }
+}
+
+```
