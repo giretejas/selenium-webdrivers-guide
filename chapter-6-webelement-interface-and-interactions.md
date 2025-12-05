@@ -1,18 +1,47 @@
 # Chapter 6: WebElement Interface and Interactions
 
-### 6.1 Introduction
-WebElement is the core interface representing page elements in Selenium. It provides actions for UI interaction and content verification.
+## Introduction
 
-### 6.2 Core Methods
-- `click()`: Clicks the element.
-- `sendKeys(String text)`: Types text into elements (input, textarea).
-- `getText()`: Gets visible inner text.
-- `getAttribute(String name)`: Reads an attribute value.
-- `getCssValue(String property)`: Fetches computed style.
-- `isDisplayed()`, `isEnabled()`, `isSelected()`: State checks.
-- `clear()`: Clears input or textarea fields.
+- WebElement represents an HTML element (like button, link) on webpage. Through WebElement object selenium interacts with DOM
+
+## Core Methods
+
+### void click()
+
+- Clicks on element such as buttons, links, dropdowns, radio and checkboxes etc.
+- Return Type: void
+
+```java
+    WebElement element = driver.findElement(By.id("id"));
+    element.click();
+```
+
+**Exceptions**:
+
+- `ElementClickInterceptedException`
+- `ElementNotInteractableException`
+- `NoSuchElementException`
+- `StaleElementReferenceException`
+
+### void sendKeys(CharSequence... sendkeys)
+
+- Types the given text into element such as input, textbox etc.
+- Return Type: `void`
+
+```java
+    WebElement element = driver.findElement(By.id("id"));
+    element.sendKeys("This text will be write inside text box");
+    element.sendKeys(Key.ENTER);
+```
+
+**Exceptions**:
+
+- `InvalidElementStateException`
+- `NoSuchElementException`
+- `StaleElementReferenceException`
 
 ### 6.3 Common Interactions
+
 ```java
 WebElement login = driver.findElement(By.id("login-btn"));
 login.click();
@@ -27,5 +56,6 @@ if (!checkbox.isSelected()) {
 ```
 
 ### 6.4 Advanced Usage
+
 - Chaining: `driver.findElement(By.id("parent")).findElement(By.tagName("input"));`
 - Lists: `List<WebElement> rows = driver.findElements(By.cssSelector("table tr"));`
