@@ -63,6 +63,8 @@ public void testHistoryNavigation() {
 }
 ```
 
+---
+
 ## Options Interface
 
 `WebDriver.Options` groups operations that behave like items in the browser’s menu: cookies, window management, timeouts, logs, etc.
@@ -83,9 +85,9 @@ interface WebDriver.Options {
 
 ### Option Methods
 
-- Timeouts: `timeouts()` returns a `Timeouts` object.
-- Window: `window()` returns a `Window` object.
-- Cookies: add, remove, list cookies.
+- **Timeouts:** `timeouts()` returns a `Timeouts` object.
+- **Window:** `window()` returns a `Window` object.
+- **Cookies:** add, remove, list cookies.
 
 ### Cookie Methods
 
@@ -139,7 +141,7 @@ public class LoginWithCookies {
 }
 ```
 
-***
+---
 
 ## Timeouts Interface
 
@@ -189,7 +191,7 @@ public WebDriver createDriverWithTimeouts() {
 
 Possible interview follow‑up: “What happens if the page load exceeds 20 seconds?” → `TimeoutException` for the navigation call.
 
-***
+---
 
 ## Window Interface
 
@@ -209,11 +211,11 @@ interface WebDriver.Window {
 }
 ```
 
-- `maximize()` – maximize current window.
-- `minimize()` – minimize window.
-- `fullscreen()` – enter fullscreen mode (different from maximize on some OSes).
-- `getSize()` / `setSize(Dimension)` – get or set viewport size.
-- `getPosition()` / `setPosition(Point)` – get or set top‑left corner position.
+- **`maximize()`** – maximize current window.
+- **`minimize()`** – minimize window.
+- **`fullscreen()`** – enter fullscreen mode (different from maximize on some OSes).
+- **`getSize()` / `setSize(Dimension)`** – get or set viewport size.
+- **`getPosition()` / `setPosition(Point)`** – get or set top‑left corner position.
 
 ### Exceptions for Window
 
@@ -250,7 +252,7 @@ public void testResponsiveLayout() {
 }
 ```
 
-***
+---
 
 ## TargetLocator Interface
 
